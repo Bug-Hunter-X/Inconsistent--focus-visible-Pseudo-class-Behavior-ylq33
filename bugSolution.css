@@ -1,0 +1,18 @@
+While a complete solution often requires JavaScript (to manage focus programmatically and consistently), we can improve the situation with more specific CSS and fallback strategies.
+
+```css
+.my-element {
+  outline: none; /*remove default outline*/
+  border: 1px solid transparent; /*add a base style*/
+}
+
+.my-element:focus {
+  border-color: blue; /* fallback for all focus*/
+}
+
+.my-element:focus-visible {
+  outline: 2px solid blue; /* enhanced focus for non-programmatic focus*/
+}
+```
+
+This approach utilizes a fallback (`outline: none;` and `:focus` to remove the default outline and provide a base style, which is then enhanced with `:focus-visible` for a more distinct visual indicator when a user interacts with the keyboard).  However, for complete control and cross-browser consistency, a JavaScript solution remains the most reliable option.
