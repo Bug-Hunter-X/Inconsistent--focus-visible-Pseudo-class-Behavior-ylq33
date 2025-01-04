@@ -1,0 +1,9 @@
+The following CSS code snippet demonstrates an issue where the `:focus-visible` pseudo-class doesn't work as expected in some browsers.  This can lead to inconsistent visual feedback when an element receives focus.
+
+```css
+.my-element:focus-visible {
+  outline: 2px solid blue;
+}
+```
+
+The issue stems from browser inconsistencies in how `:focus-visible` is implemented. Some browsers might not fully support it, or might have different interpretations of when to apply the style, particularly when the element has default focus behavior (e.g., not programmatically focused).
